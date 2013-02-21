@@ -1,0 +1,91 @@
+#include<stdio.h>
+#include<time.h>
+#include<windows.h>
+#include<dos.h>
+#include<conio.h>
+#include<cstdlib>
+int main(void)
+  
+{
+	int hr,mi,se;
+	int Hr,Mi,Se;
+	int h,m,s,tecla;
+	printf ("\n***Programar la hora actual del Reloj***\n");
+	printf ("\nIntroduzca las Horas:\n");
+	scanf ("%d",&hr);
+	printf ("\nIntroduzca las Minutos:\n");
+	scanf ("%d",&mi);
+	printf ("\nIntroduzca las Segundos:\n");
+	scanf ("%d",&se);
+	printf ("\n***Programar la Alarma***\n");
+	printf ("\nIntroduzca las Horas:\n");
+	scanf ("%d",&Hr);
+	printf ("\nIntroduzca las Minutos:\n");
+	scanf ("%d",&Mi);
+	printf ("\nIntroduzca las Segundos:\n");
+	scanf ("%d",&Se);
+	while(kbhit()!=true){
+		
+		for (h=hr;h<24;h++) {
+			for (m=mi;m<60;m++) {
+				for (s=se;s<60;s++) {
+					if (kbhit()) {
+						tecla=getch ();
+						if (tecla=='1') 
+						{
+							h=25;
+							m=60;
+							s=60;
+						}
+						
+					}
+					system ("CLS");
+					printf ("-----DESPERTADOR-----\n");
+					printf ("\nH M S\n");
+					printf ("\n%.2d:%.2d:%.2d\n",h,m,s);
+					
+					Sleep(1000);
+					if (h==Hr && m==Mi && s==Se) {
+						printf ("DESPIERTATE WUEVON\n");
+						Beep(5000,100);      
+						Sleep(1000);       
+						Beep(5000,100);       
+						Sleep(900);     
+						Beep(5000,100);    
+						Sleep(800);    
+						Beep(5000,100);  
+						Sleep(700);    
+						Beep(5000,100);   
+						Sleep(600);      
+						Beep(5000,100);        
+						Sleep(500);    
+						Beep(5000,100);    
+						Sleep(400);    
+						Beep(5000,100);      
+						Sleep(300);    
+						Beep(5000,100);      
+						Sleep(200);      
+						Beep(5000,100);    
+						Sleep(100);   
+						Beep(5000,100);      
+						Beep(5000,100);    
+						Beep(5000,100);        
+						Beep(5000,100);         
+						Beep(5000,100);      
+						Beep(5000,100);        
+						Beep(5000,100);       
+						Beep(5000,100);        
+						Beep(5000,100);        
+						Beep(1000,100000);
+						
+					} else 
+						{
+						
+					}
+				}se=0;
+			}mi=0; 
+			
+		}hr=0;
+	}
+
+}
